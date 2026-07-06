@@ -1,3 +1,4 @@
+# knowledge_base.py
 # ============================================================
 # MODULE 2: FOL Knowledge Base + Inference Engine
 # Covers: Week 5 (First-Order Logic & Inference)
