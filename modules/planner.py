@@ -201,12 +201,18 @@ class TreatmentPlanner:
 
     def analyze(self, percept) -> Dict:
         """Module interface — maps inputs based on clinical findings"""
-        # Dynamically map the parent agent's structural metadata fields
         dx = getattr(percept, 'diagnosis_guess', 'flu')
         urg = getattr(percept, 'urgency_guess', 'MEDIUM')
         
         result = self.create_treatment_plan(dx, urg)
-        result['summary']    = f"Plan: {result['steps']} steps generated"
+        
+        # 🌟 SAFE GUARD FIX: Check for empty plan failure keys before formatting summary
+        if 'error' in result:
+            result['summary'] = f"Plan: Stalled | {result['error']}"
+            result['steps'] = 0
+        else:
+            result['summary'] = f"Plan: {result['steps']} steps generated"
+            
         result['diagnosis']  = dx
         result['confidence'] = 1.0
         return result
