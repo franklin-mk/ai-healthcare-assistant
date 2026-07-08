@@ -1,8 +1,0 @@
-══════════════════════════════════════════════════════════════════════
-      🏥 INTLLIGENT HEALTHCARE DIAGNOSTIC AI PLATFORM AUDIT REPORT
-         CCS 3101 Introduction to AI — Capstone Project Final Deliverable
-══════════════════════════════════════════════════════════════════════
-
-📝 SECTION 1: ARCHITECTURAL PERFORMANCE BENCHMARKS
-──────────────────────────────────────────────────────────────────────
-  • Ensemble ML Tree Classifier Metrics:
